@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['Aname'])){
-	header('location: index.php');
+if (!isset($_SESSION['Aname'])) {
+    header('location: index.php');
 }
 ?>
 
@@ -20,10 +20,10 @@ if(!isset($_SESSION['Aname'])){
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
+        </script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -34,27 +34,27 @@ if(!isset($_SESSION['Aname'])){
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-    </script>
+        </script>
 
     <?php
-        include_once('./templates/sidebar.php');
+    include_once('./templates/sidebar.php');
     ?>
 
     <?php
-                    $host = "localhost";
-                    $dbuser = "root";
-                    $dbpass = "vijai1234@";
-                    $dbase = "enigma";
+    $host = "localhost";
+    $dbuser = "root";
+    $dbpass = "vijai@123";
+    $dbase = "enigma";
 
-                    $dbc= mysqli_connect($host,$dbuser,$dbpass, $dbase)  
-                            or die("Unable to select database"); 
-                    ?>
+    $dbc = mysqli_connect($host, $dbuser, $dbpass, $dbase)
+        or die("Unable to select database");
+    ?>
     <br><br>
     <table class="table container" style="margin-top: 75px; margin-left: 20px; padding-right: 20px">
         <div class="row" style="margin-top: 75px; margin-bottom: 20px; margin-left: 20px;">
@@ -74,23 +74,23 @@ if(!isset($_SESSION['Aname'])){
         </thead>
         <tbody>
             <?php
-                        $query1="select * from users";
-                        $exe1 = mysqli_query($dbc,$query1);
-                            while($row1 = mysqli_fetch_array($exe1)){
-                                $p_id=$row1['uid'];
-                                $name=$row1['name'];
-                                $email=$row1['email'];
-                                $phone=$row1['phone'];
-                                $year=$row1['year'];
-                                $dept=$row1['dept'];
-                                echo "
+            $query1 = "select * from users";
+            $exe1 = mysqli_query($dbc, $query1);
+            while ($row1 = mysqli_fetch_array($exe1)) {
+                $p_id = $row1['uid'];
+                $name = $row1['name'];
+                $email = $row1['email'];
+                $phone = $row1['phone'];
+                $year = $row1['year'];
+                $dept = $row1['dept'];
+                echo "
                                 <tr>
-                                    <td>".$p_id."</td>
-                                    <td>".$name."</td>
-                                    <td>".$email."</td>
-                                    <td>".$phone."</td>
-                                    <td>".$year."</td>
-                                    <td>".$dept."</td>
+                                    <td>" . $p_id . "</td>
+                                    <td>" . $name . "</td>
+                                    <td>" . $email . "</td>
+                                    <td>" . $phone . "</td>
+                                    <td>" . $year . "</td>
+                                    <td>" . $dept . "</td>
                                     <td>
 						                <a href='./components/user/update.php?id=$p_id'>
                                             <button type='button' class='btn btn-info'>Edit</button>
@@ -101,9 +101,9 @@ if(!isset($_SESSION['Aname'])){
                                         </a>
                                     </td>
                                 </tr>";
-                            }
+            }
 
-                        ?>
+            ?>
         </tbody>
     </table>
     </div>
@@ -112,6 +112,6 @@ if(!isset($_SESSION['Aname'])){
     </div>
     </section>
     <?php
-        include_once('./templates/footer.php');
+    include_once('./templates/footer.php');
     ?>
     </body>

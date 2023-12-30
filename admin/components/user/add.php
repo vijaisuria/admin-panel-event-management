@@ -1,32 +1,32 @@
 <?php
-$dbc= mysqli_connect("localhost","root","vijai1234@", "enigma")  
-        or die("Unable to select database"); 
+$dbc = mysqli_connect("localhost", "root", "vijai@123", "enigma")
+    or die("Unable to select database");
 
 session_start();
 
 if (!(isset($_SESSION['Aname']))) {
-	echo "Unauthorized Access";
-	return;
+    echo "Unauthorized Access";
+    return;
 }
 
 if (isset($_POST) & !empty($_POST)) {
-	$name = ($_POST['name']);
-	$email = ($_POST['email']);
-	$phone = ($_POST['phone']);
-	$year = ($_POST['year']);
-	$password = ($_POST['password']);
-	$dept = ($_POST['dept']);
+    $name = ($_POST['name']);
+    $email = ($_POST['email']);
+    $phone = ($_POST['phone']);
+    $year = ($_POST['year']);
+    $password = ($_POST['password']);
+    $dept = ($_POST['dept']);
 
-	$query = "INSERT INTO `users` (name, email, phone, year, password, dept) 
+    $query = "INSERT INTO `users` (name, email, phone, year, password, dept) 
 		VALUES ('$name', '$email', '$phone', '$year', '$password', '$dept')";
 
-	$res = mysqli_query($dbc, $query);
-	if ($res) {
-		header('location: ../../user.php');
-	} else {
-		$fmsg = "Failed to Insert data.";
-		print_r($res);
-	}
+    $res = mysqli_query($dbc, $query);
+    if ($res) {
+        header('location: ../../user.php');
+    } else {
+        $fmsg = "Failed to Insert data.";
+        print_r($res);
+    }
 }
 ?>
 
@@ -43,10 +43,10 @@ if (isset($_POST) & !empty($_POST)) {
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
-    </script>
+        </script>
 
     <link rel="stylesheet" href="home.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -118,13 +118,18 @@ if (isset($_POST) & !empty($_POST)) {
             <div class="profile-details">
                 <img src="https://t4.ftcdn.net/jpg/00/97/00/09/360_F_97000908_wwH2goIihwrMoeV9QF3BW6HtpsVFaNVM.jpg"
                     alt="profile">
-                <span class="admin_name"> <?php echo $_SESSION["Aname"] ?> </span>
+                <span class="admin_name">
+                    <?php echo $_SESSION["Aname"] ?>
+                </span>
                 <i class='bx bx-chevron-down'></i>
             </div>
         </nav>
         <div class="container">
 
-            <?php if (isset($fmsg)) { ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div>
+            <?php if (isset($fmsg)) { ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $fmsg; ?>
+                </div>
             <?php } ?>
 
             <h2 style="padding-top: 120px; margin-left: 20px">Add New User</h2>

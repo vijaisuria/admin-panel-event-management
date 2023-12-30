@@ -60,12 +60,7 @@ ALTER TABLE `events`
 ALTER TABLE `users`
   MODIFY `uid` int(255) NOT NULL AUTO_INCREMENT;
   
-SELECT pid, p.eid, e.name, u.uid, u.name, email, phone, year, dept
-FROM participants p
-JOIN users u
-	ON u.uid = p.uid
-JOIN events e
-	ON e.eid = p.eid;
+insert into admin(name,pass,email,isaccess) values("vijai", '1234', "vijai@mit.edu", 1);
     
 COMMIT;
 

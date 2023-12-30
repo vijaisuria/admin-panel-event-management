@@ -3,14 +3,14 @@ session_start();
 
 $host = "localhost:3308";
 $dbuser = "root";
-$dbpass = "vijai1234@";
+$dbpass = "vijai@123";
 $dbase = "enigma";
 $table = "admin";
 
 $email = $_POST['username'];
 $password = $_POST['password'];
 
-$dbc = mysqli_connect("localhost", "root", "vijai1234@", "enigma")
+$dbc = mysqli_connect("localhost", "root", "vijai@123", "enigma")
 	or die("Unable to select database");
 
 $query1 = "SELECT * FROM $table where email='$email' and pass='$password'";
