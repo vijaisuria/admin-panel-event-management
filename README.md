@@ -50,6 +50,12 @@ This admin panel website serves as a comprehensive management system for organiz
 
 Contributions to this project are welcome! Feel free to fork the repository, make changes, and submit a pull request.
 
+### Screenshots
+
+![Screenshot of the application](./screenshot.png)
+![Screenshot of the application](./screenshot.png)
+![Screenshot of the application](./screenshot.png)
+
 ### Output Video
 
 Include a link to the video demonstrating the admin panel's functionalities here.
