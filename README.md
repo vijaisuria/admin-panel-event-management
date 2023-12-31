@@ -7,9 +7,8 @@
 3. [Tech Stack](#tech-stack)
 4. [Installation and Deployment](#installation-and-deployment)
 5. [Contribution](#contribution)
-6. [Contact](#contact)
-7. [Output Video](#output-video)
-8. [Other Sections](#other-sections)
+6. [Output Video](#output-video)
+7. [Contact](#get-in-touch)
 
 ---
 
@@ -52,9 +51,10 @@ Contributions to this project are welcome! Feel free to fork the repository, mak
 
 ### Screenshots
 
-![Screenshot of the application](./screenshot.png)
-![Screenshot of the application](./screenshot.png)
-![Screenshot of the application](./screenshot.png)
+![Login page](https://raw.githubusercontent.com/vijaisuria/admin-panel-event-management/master/output/screenshot-1.png).
+![Admin Dashboard](https://raw.githubusercontent.com/vijaisuria/admin-panel-event-management/master/output/screenshot-2.png)
+![User controller](https://raw.githubusercontent.com/vijaisuria/admin-panel-event-management/master/output/screenshot-3.png)
+![Participants controller](https://raw.githubusercontent.com/vijaisuria/admin-panel-event-management/master/output/screenshot-4.png)
 
 ### Output Video
 
@@ -62,8 +62,12 @@ Include a link to the video demonstrating the admin panel's functionalities here
 
 [Output Video Link](https://annauniv0-my.sharepoint.com/:v:/g/personal/2021503568_student_annauniv_edu/ETVHnivhoxhMiwbIMEJf87EBDp5ow5hh08Sbmb4HZ4osFA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=P7befp)
 
-### Contact
+## Get in Touch
 
-For any queries or suggestions, please feel free to reach out to the project maintainers:
+For inquiries or collaborations, connect with me through 📬:
 
-- [Vijai Suria M](vijaisuria@email.com)
+- Email: [vijaisuria87@gmail.com](mailto:vijaisuria87@gmail.com)
+- LinkedIn: [vijaisuria](https://www.linkedin.com/in/vijaisuria/)
+- Twitter: [vijaisuria](https://twitter.com/vijaisuria)
+- GitHub: [Vijai Suria](https://github.com/vijaisuria)
+
